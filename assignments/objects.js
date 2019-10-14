@@ -19,19 +19,105 @@ const example = {
 
 // Write your intern objects here:
 
+const intern = {
+  "id": 1,
+  "name": "Mitzi",
+  "email": "mmelloy0@psu.edu",
+  "gender": "F",
+  
+};
 
+const intern1 = {
+  "id": 2,
+  "name": "Kennan",
+  "email": "kdiben1@timypic.com",
+  "gender": "M",
+  'speak': function() {
+    console.log(`hello my name is ${this.name}`);
+  }
+};
+
+
+intern1.speak();
+
+
+const intern2 = {
+  "id": 3,
+  "name": "Keven",
+  "email": "kmummery2@wikimedia.org",
+  "gender": "M",
+
+};
+
+const intern3 = {
+  "id": 4,
+  "name": "Gannie",
+  "email": "gmartinson@illinois.edu",
+  "gender": "M",
+
+};
+
+const intern4 = {
+  "id": 5,
+  "name": "Antonietta",
+  "email": "adaine5@samsung.com",
+  "gender": "F",
+  "multiplyTwoNums": function(num1, num2) {
+    console.log(`hello, I am ${this.name}, and I know how to do Math. When you multiply ${num1} by ${num2} you get this: `, num1 * num2);
+  }
+
+};
+
+intern4.multiplyTwoNums(3, 4);
 // ==== Challenge 2: Reading Object Data ==== 
 // Once your objects are created, log out the following requests from HR into the console:
 
+
+const parent = {
+  'name': 'Susan',
+  'age': 70,
+  'speak': function() {
+    return `hello my name is ${this.name}`
+  },
+  'child': {
+    'name': 'George',
+    'age': 50,
+    'speak': function() {
+      return `hello my name is ${this.name}`
+    },
+    'grandchild': {
+      'name': 'Sam',
+      'age': 30,
+      'speak': function() {
+        return `hello my name is ${this.name}`
+      },
+    },
+  },
+};
+
+console.log(parent.speak());
+console.log(parent.child.speak());
+console.log(grandchild.speak());
+
 // Mitzi's name
+console.log(intern.name);
+
+
 
 // Kennan's ID
+console.log(intern1.id);
 
 // Keven's email
+console.log(intern3.email);
 
 // Gannie's name
 
+console.log(intern3.name);
+
 // Antonietta's Gender
+console.log(intern4.gender);
+
+
 
 // ==== Challenge 3: Object Methods ==== 
 // Give Kennan the ability to say "Hello, my name is Kennan!" Use the console.log provided as a hint.
@@ -44,12 +130,8 @@ const example = {
 
 // ==== Stretch Challenge: Nested Objects and the this keyword ==== 
 
-// 1. Create a parent object with properties for name and age.  Make the name Susan and the age 70.
-// 2. Nest a child object in the parent object with name and age as well.  The name will be George and the age will be 50.
-// 3. Nest a grandchild object in the child object with properties for name and age.  The name will be Sam and the age will be 30
-// 4. Give each of the objects the ability to speak their names using the this keyword.
 
-const parent = {}
+
 
 // Log the parent object's name
 
@@ -62,3 +144,4 @@ const parent = {}
 // Have the child speak
 
 // Have the grandchild speak
+
